@@ -26,14 +26,14 @@ if ($conn->connect_error) {
         $temp = str_replace("m³/hr","mÂ³/hr",$temp_q);
         $id = $row['id'];
         $sub_q ="UPDATE ac_technical_spec_offline_tbl SET air_circulation='$temp' WHERE id='$id'";
-        $result = mysqli_query($conn, $sub_q) or die("Query Failed 2222222");
+        $sub_q_result = mysqli_query($conn, $sub_q) or die("Query Failed 2222222");
       }
 
       if(strpos($temp_q, 'm3/hr') !== false){
         $temp = str_replace("m3/hr","mÂ³/hr",$temp_q);
         $id = $row['id'];
         $sub_q ="UPDATE ac_technical_spec_offline_tbl SET air_circulation='$temp' WHERE id='$id'";
-        $result = mysqli_query($conn, $sub_q) or die("Query Failed 3333333");
+        $sub_q_result = mysqli_query($conn, $sub_q) or die("Query Failed 3333333");
       }
     }
 
